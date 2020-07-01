@@ -10,7 +10,7 @@ $| = 1;
 
 ### Creating the UserAgent object.
 my $ua = LWP::UserAgent->new(requests_redirectable => [ 'GET', 'HEAD', 'POST' ], cookie_jar => HTTP::Cookies->new, agent => "User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0");
-$ua->ssl_opts(verify_hostname => 0, SSL_verify_mode => 0x00);
+#$ua->ssl_opts(verify_hostname => 0, SSL_verify_mode => 0x00); # ignore ssl/tls issues.
 
 print "Generating a definitions file";
 
